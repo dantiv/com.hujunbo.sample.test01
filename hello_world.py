@@ -5,6 +5,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+# 改行
 print()
 print("# ============== 算数（さんすう） ")
 num01 = 105
@@ -57,6 +58,7 @@ print("# {} ** {} = ".format(num13, num14), end="")
 i = num13 ** num14
 print(i)
 
+# 改行
 print()
 text = "Hello World  "
 print("# ============== 文字列（もじれつ） ")
