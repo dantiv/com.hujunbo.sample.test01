@@ -81,3 +81,4 @@ print("{1} {0}".format("Hello", "World"))
 
 print("# -------------- 文字列フォーマットその3")
 print("{word2} {word1}".format(word1="Hello", word2="World"))
+
