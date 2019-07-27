@@ -1,6 +1,7 @@
 from ToolsUtil.ConsoleTools import ConsoleTools
 
 
+# 入口
 def main():
     print("Start Main")
 
@@ -8,6 +9,11 @@ def main():
 if __name__ == "__main__":
     main()
 
+#
+# Python 初心者ノット
+# コメント付きで出力してよりわかりやすくPython言語を理解する
+# 1.基本な値と演算式
+#
 # 改行
 print()
 ConsoleTools.print_main("# ============== 算数（さんすう） ")
@@ -18,49 +24,52 @@ print("{} + {} = ".format(num01, num02), end="")
 i = num01 + num02
 print(i)
 
-num03 = 45
-num04 = 35
+num01 = 45
+num02 = 35
 ConsoleTools.print_sub("# -------------- 引き算(ひきざん) ")
-print("{} - {} = ".format(num03, num04), end="")
-i = num03 - num04
+print("{} - {} = ".format(num01, num02), end="")
+i = num01 - num02
 print(i)
 
-num05 = 3
-num06 = 2
+num01 = 45
+num02 = 35
 ConsoleTools.print_sub("# -------------- 掛け算(かけざん) ")
-print("{} * {} = ".format(num05, num06), end="")
-i = num05 * num06
+print("{} * {} = ".format(num01, num02), end="")
+i = num01 * num02
 print(i)
 
-num07 = 40
-num08 = 8
+num01 = 45
+num02 = 35
 # (Python2とPython3で挙動が違うので注意)
 ConsoleTools.print_sub("# -------------- 割り算(わりざん) ")
-print("{} / {} = ".format(num07, num08), end="")
-i = num07 / num08
+print("{} / {} = ".format(num01, num02), end="")
+i = num01 / num02
 print(i)
 
-num09 = 43
-num10 = 8
+num01 = 45
+num02 = 35
 ConsoleTools.print_sub("# -------------- 割り算(わりざん)(少数切り捨て) ")
-print("{} / {} = ".format(num09, num10), end="")
-i = num09 // num10
+print("{} / {} = ".format(num01, num02), end="")
+i = num01 // num02
 print(i)
 
-num11 = 49
-num12 = 9
+num01 = 45
+num02 = 35
 ConsoleTools.print_sub("# -------------- 剰余(じょうよ) ")
-print("{} * {} = ".format(num11, num12), end="")
-i = num11 % num12
+print("{} * {} = ".format(num01, num02), end="")
+i = num01 % num02
 print(i)
 
-num13 = 12
-num14 = 2
+num01 = 45
+num02 = 35
 ConsoleTools.print_sub("# -------------- 冪乗(べきじょう)平方 ")
-print("{} ** {} = ".format(num13, num14), end="")
-i = num13 ** num14
+print("{} ** {} = ".format(num01, num02), end="")
+i = num01 ** num02
 print(i)
 
+#
+# 2.基本な文字列操作
+#
 # 改行
 print()
 text = "Hello World  "
@@ -87,43 +96,46 @@ print("{1} {0}".format("Hello", "World"))
 ConsoleTools.print_sub("# -------------- 文字列フォーマットその3")
 print("{word2} {word1}".format(word1="Hello", word2="World"))
 
+#
+# 3.条件分岐、繰り返し、例外処理
+#
 # 改行
 print()
-ConsoleTools.print_main("# ============== ループ数字(すうじ)")
+ConsoleTools.print_main("# ============== FOR ループ数字(すうじ)")
 ConsoleTools.print_sub("# -------------- for range(int)")
 for i in range(5):
-    print(i)
+    print("i = " + str(i))
 ConsoleTools.print_sub("# -------------- for range(int,int)")
 for i in range(1, 5):
-    print(i)
+    print("i = " + str(i))
 ConsoleTools.print_sub("# -------------- for with if")
 for i in range(11):
     if i % 3 == 0:
-        print(i)
+        print("i = " + str(i))
 
 # 改行
 print()
-ConsoleTools.print_main("# ============== ループ文字列(もじれつ)")
+ConsoleTools.print_main("# ============== FOR ループ文字列(もじれつ)")
 ConsoleTools.print_sub("# -------------- for char in [string]")
 for char in 'hello':
-    print(char)
+    print("char = " + char)
 
 # 改行
 print()
-ConsoleTools.print_main("# ============== ループ配列(はいれつ)")
+ConsoleTools.print_main("# ============== FOR ループ配列(はいれつ)")
 ConsoleTools.print_sub("# -------------- for string in string[] with if, break")
 strings = ['ruby', 'python', 'perl', 'java', 'c']
 for string in strings:
     if string == 'python':
         print('OK -> ' + string)
         break  # 一致したので、breakで抜ける
-    print(string)
+    print("item = " + string)
 
 ConsoleTools.print_sub("# -------------- for string in string[] with if, break, continue")
 strings = ['ruby', 'python', 'perl', 'java', 'c']
 for string in strings:
     if string != 'python':
-        print(string)
+        print("item = " + string)
         continue  # 一致していないので、次のループへ
     print('OK')
     break
@@ -131,11 +143,34 @@ for string in strings:
 ConsoleTools.print_sub("# -------------- for-else with if, break")
 scores = [100, 71, 80, 99, 75]  # 70点以下はないので、合格
 for score in scores:
+    print("score = " + str(score))
     if score <= 70:
         break
 else:
     print('合格')
 
+# 改行
+print()
+ConsoleTools.print_main("# ============== WHILE ループ数字(すうじ)")
+ConsoleTools.print_sub("# -------------- while")
+num = 1
+while num < 4:
+    print("num = " + str(num))
+    num += 1
+ConsoleTools.print_sub("# -------------- while with else")
+ConsoleTools.print_sub("# while文の最後に実行される処理を記述する")
+total = 0
+num = 1
+while num < 4:
+    print("num = " + str(num))
+    total += num
+    num += 1
+else:
+    print("Total = " + str(total))
+
+#
+# console 出力関連
+#
 # 改行
 print()
 ConsoleTools.print_main("# ============== コンソール出力（しゅつりょく）")
@@ -148,6 +183,9 @@ print(ConsoleTools.BOLD + "{}".format("BOLD") + ConsoleTools.END)
 print(ConsoleTools.GREEN + "{}".format("GREEN") + ConsoleTools.END)
 print(ConsoleTools.BLACK + "{}".format("BLACK") + ConsoleTools.END)
 
+#
+# 参考、引用コード、学習におすすめ参考サイト
+#
 # 改行
 print()
 print("# 参考サイト： ")
